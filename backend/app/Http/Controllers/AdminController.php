@@ -6,15 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Auth;
 
-class AdminAuthController extends Controller
+class AdminController extends Controller
 {
-    // Mostrar formulario de login de administrador
     public function showLoginForm()
     {
         return view('admin.login');
     }
-
-    // Login de administrador
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
@@ -25,8 +22,6 @@ class AdminAuthController extends Controller
 
         return back()->with('error', 'Credenciales incorrectas');
     }
-
-    // Logout de administrador
     public function logout()
     {
         Auth::guard('admin')->logout();

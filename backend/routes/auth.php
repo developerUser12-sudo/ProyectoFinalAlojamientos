@@ -10,7 +10,14 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\PasswordResetLinkAdminController;
+use App\Http\Controllers\Auth\NewPasswordAdminController;
 
+Route::get('forgot-passwordAdmin', [PasswordResetLinkAdminController::class, 'create'])->name('password.requestAdmin');
+Route::post('forgot-passwordAdmin', [PasswordResetLinkAdminController::class, 'store'])->name('password.emailAdmin');
+
+Route::get('reset-passwordAdmin/{token}', [NewPasswordAdminController::class, 'create'])->name('password.resetAdmin');
+Route::post('reset-passwordAdmin', [NewPasswordAdminController::class, 'store'])->name('password.updateAdmin');
 Route::middleware('guest')->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
         ->name('register');
