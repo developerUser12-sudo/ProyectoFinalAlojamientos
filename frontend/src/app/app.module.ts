@@ -7,6 +7,7 @@ import { BienvenidaComponent } from './bienvenida/bienvenida.component';
 import { VuelosComponent } from './vuelos/vuelos.component';
 import { HotelesComponent } from './hoteles/hoteles.component';
 import { AlquilercochesComponent } from './alquilercoches/alquilercoches.component';
+import { PaneladministracionComponent } from './paneladministracion/paneladministracion.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AlquilercochesComponent } from './alquilercoches/alquilercoches.compone
     BienvenidaComponent,
     VuelosComponent,
     HotelesComponent,
-    AlquilercochesComponent
+    AlquilercochesComponent,
+    PaneladministracionComponent
   ],
   imports: [
     BrowserModule,

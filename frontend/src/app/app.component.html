@@ -1,24 +1,28 @@
 <header>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <div id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            
-            <a class="nav-link" routerLink="/bienvenida" routerLinkActive="active"><i class="bi bi-airplane"></i></a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" routerLink="/busqueda" routerLinkActive="active">Buscar películas / series</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/acercade" routerLinkActive="active">Acerca de</a>
-          </li> -->
-        </ul>
+  <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+      <div class="container-fluid">
+          <a class="navbar-brand d-flex flex-column align-items-center" routerLink="/" routerLinkActive="active">
+              <i class="bi bi-airplane"></i> Instaholidays
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="http://127.0.0.1:8000/">Iniciar sesión</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="http://127.0.0.1:8000/register">Registro</a>
+                  </li>
+              </ul>
+          </div>
       </div>
-    </div>
   </nav>
 </header>
-<main>
+
+<main class="bg-body-secondary">
   <router-outlet></router-outlet>
 </main>
 <footer class="footer bg-primary d-flex flex-column">
